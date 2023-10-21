@@ -15,7 +15,7 @@ html {
 
   #secondBg {
     width: 100%;
-    background: linear-gradient(180deg, #58a8fd 5%, #3093fd 50%, #66bdff);
+    background: linear-gradient(180deg, #107ff7 5%, #0f7df3 50%, #1b9cff);
     color: #23272a;
   }
 
@@ -53,6 +53,7 @@ html {
 
 .blog-post {
     border: 1px solid #02091a;
+    background: linear-gradient(180deg, #0059b9 5%, #0b62c0 50%, #004275);
     border-radius: 15px;
     padding: 10px;
     text-align: center !important;
