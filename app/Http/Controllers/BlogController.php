@@ -50,6 +50,9 @@ class Blogcontroller extends Controller
     
         if (!$blogPost) {
             abort(404); // Return a 404 error response when the blog post is not found
+            header("HTTP/1.0 404 Not Found");
+    include("custom-404-page.html");
+    exit();
         }
     
         return view('blog.show', [
