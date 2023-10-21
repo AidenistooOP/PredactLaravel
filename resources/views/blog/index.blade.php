@@ -16,8 +16,8 @@
         <br>
       </div>
       <div id="secondBg">
-
-        <h1>Blog Posts</h1>
+<br> <br>
+        <h1 style="color: white"># Blog Posts</h1>
         <div class="blog-grid">
             @foreach($blogPosts as $post)
             <a href="{{ route('blog.show', ['title' => $post->slug]) }}">
@@ -27,7 +27,8 @@
                 </div>
               </a>
             @endforeach
-        </div> <br> <br><br><br><br><br><br><br><br>
+        </div> <br>  <p style="font-size: 18px">Fout gevonden in een van onze blog posts? <a href="mailto:aidenonyenwenu@predact.nl?subject=Fout gevonden in blog:" target="_top">Meld het hier!</a></p>
+          <br> <br><br><br><br><br><br>
       </div>
       <div class="footerWrapper">
         <footer class="footer">
@@ -38,7 +39,8 @@
                 <ul>
                   <li><a href="/home">Home</a></li>
                   <li><a href="/login">Login</a></li>
-                  <li><a href="/offerte">Prijzen</a></li>
+                  <li><a href="/offerte">Offerte</a></li>
+                  <li><a href="/projecten">Projecten</a></li>
                   <li><a href="#">Privacy Policy</a></li>
                 </ul>
               </div>
