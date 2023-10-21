@@ -143,12 +143,13 @@
               <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="/login">Login</a></li>
-                <li><a href="/offerte">Prijzen</a></li>
+                <li><a href="/offerte">Offerte</a></li>
+                <li><a href="/projecten">Projecten</a></li>
                 <li><a href="#">Privacy Policy</a></li>
               </ul>
             </div>
             <div class="footer-col">
-              <h4>Handige links</h4>
+              <h4>Lees over</h4>
               <ul>
                 <li><a href="blogs/minecraft">Minecraft plug-ins</a></li>
                 <li><a href="blogs/office365">Support bij Office 365</a></li>
@@ -157,7 +158,7 @@
               </ul>
             </div>
             <div class="footer-col">
-              <h4>Offerte aanvragen</h4>
+              <h4>Kom een kop koffie drinken!</h4>
               <ul>
                 <li><a href="/offerte" id="offerteText">Bent u geïnteresseerd in een unieke website op maat? Dan zit
                     u
