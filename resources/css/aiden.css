@@ -1,0 +1,12 @@
+body {
+    width: 100%;
+    background-color: #58a8fd;
+    color: #23272a;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, p {
+    margin-left: 15px;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, S;
+}
