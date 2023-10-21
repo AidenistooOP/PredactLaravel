@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('homepage');
 });
 
+Route::get('/aiden-onyenwenu', function () {
+    return view('aiden');
+});
+
 Route::get('/home', function () {
     return view('homepage');
 });
