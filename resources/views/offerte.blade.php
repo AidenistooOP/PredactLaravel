@@ -32,11 +32,24 @@
                 Discord-bots en hosting. Laat ons uw ideeën werkelijkheid maken!</p>
             <br>
             <p>Bedankt voor uw interesse in onze diensten! We zijn verheugd om u te voorzien van een offerte op maat.
-                Hier is wat meer informatie over ons bedrijf en hoe u contact met ons kunt opnemen: <br> </p> <a
-                href="mailto:aidenonyenwenu@gmail.com" class="sign-up-btn_offerte">Email</a> <a href="tel:+31615321479"
-                class="sign-up-btn_offerte">Telefoon +31615321479</a>
+                Hier is wat meer informatie over ons bedrijf en hoe u contact met ons kunt opnemen: <br>  E: aidenonyenwenu@predact.nl <br>
+                T: +31615321479</p>
+                <button class="sign-up-btn_offerte" data-cal-link="aidenonyenwenu123/meet-with-me"><i class="fa-regular fa-calendar"></i> Maak een online afspraak</button>
         </div>
     </div>
+    <!-- Cal element-click embed code begins -->
+<script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+  Cal("init", {origin:"https://cal.com"});
+  
+    
+    // Important: Please add following attributes to the element you want to open Cal on click
+    // `data-cal-link="aidenonyenwenu123/meet-with-me"`
+    // `data-cal-config='{"layout":"month_view"}'`
+    
+    Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
+    <!-- Cal element-click embed code ends -->
   <br>
     </article>
     <div class="footerWrapper">
@@ -48,7 +61,8 @@
                         <ul>
                             <li><a href="/home">Home</a></li>
                             <li><a href="/login">Login</a></li>
-                            <li><a href="#">Prijzen</a></li>
+                            <li><a href="/offerte">Offerte</a></li>
+                            <li><a href="/projecten">Projecten</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                         </ul>
                     </div>
