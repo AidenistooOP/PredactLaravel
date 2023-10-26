@@ -30,6 +30,12 @@
                     </a>
         </div>
         <br>  
+        <form method="POST" action="{{ route('blog.destroy', $blogPost->id) }}">
+            @csrf
+            @method('DELETE')
+            <button id="deleteBtn" type="submit"><i class="fa-solid fa-trash" style="font-size: 14px"></i> Delete</button>
+        </form>
+        
     </div>
 
     <br> <br>

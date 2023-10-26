@@ -7,7 +7,7 @@ use App\Models\BlogPost;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Str;
 
-class Blogcontroller extends Controller
+class BlogController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -44,12 +44,12 @@ class Blogcontroller extends Controller
      */
     public function show($title)
     {
-        $slug = Str::slug($title, '-'); // Create a slug
+        $slug = Str::slug($title, '-');
     
-        $blogPost = BlogPost::where('slug', $slug)->first(); // Retrieve by slug
+        $blogPost = BlogPost::where('slug', $slug)->first();
     
         if (!$blogPost) {
-            abort(404); // Return a 404 error response when the blog post is not found
+            abort(404); 
             header("HTTP/1.0 404 Not Found");
     include("custom-404-page.html");
     exit();
@@ -61,9 +61,20 @@ class Blogcontroller extends Controller
             'read_time' => $blogPost->read_time,
             'description' => $blogPost->description,
             'blogPost' => $blogPost,
-            'image' => $blogPost->image, // Include the image data
-            'slug' => $slug, // Pass the slug to the view
+            'image' => $blogPost->image,
+            'slug' => $slug,
         ]);
+    }
+
+    public function destroy($id)
+    {
+        $blogPost = BlogPost::find($id);
+    
+        if (!$blogPost) {
+            abort(404);
+        }
+        $blogPost->delete();
+        return redirect('/blogs')->with('success', 'Blog post deleted successfully');
     }
     
     

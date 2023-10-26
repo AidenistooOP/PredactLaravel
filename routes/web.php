@@ -19,6 +19,10 @@ Route::get('/', function () {
     return view('homepage');
 });
 
+Route::get('/aiden-onyenwenu', function () {
+    return view('aiden');
+});
+
 Route::get('/home', function () {
     return view('homepage');
 });
@@ -32,4 +36,8 @@ Route::get('/offerte', function () {
 });
 
 Route::get('/blogs', 'App\Http\Controllers\BlogController@index')->name('blog.index');
-Route::get('/blogs/{title}', 'App\Http\Controllers\Blogcontroller@show')->name('blog.show');
+Route::get('/blogs/{title}', 'App\Http\Controllers\BlogController@show')->name('blog.show');
+Route::delete('/blogs/{id}', 'App\Http\Controllers\BlogController@destroy')->name('blog.destroy');
+
+
+

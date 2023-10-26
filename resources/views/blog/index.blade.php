@@ -27,7 +27,7 @@
                 </div>
               </a>
             @endforeach
-        </div> <br>  <p style="font-size: 18px">Fout gevonden in een van onze blog posts? <a href="mailto:aidenonyenwenu@predact.nl?subject=Fout gevonden in blog:" target="_top">Meld het hier!</a></p>
+        </div> <br>  <p style="font-size: 18px">Fout gevonden in een van onze blog posts? <a href="mailto:bugs@predact.nl?subject=Fout gevonden in blog:" target="_top">Meld het hier!</a></p>
           <br> <br><br><br><br><br><br>
       </div>
       <div class="footerWrapper">
