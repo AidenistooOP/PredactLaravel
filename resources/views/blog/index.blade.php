@@ -20,7 +20,7 @@
         <h1 style="color: white"># Blog Posts</h1>
         <div class="blog-grid">
             @foreach($blogPosts as $post)
-            <a href="{{ route('blog.show', ['blog' => $post->slug]) }}">
+            <a href="{{ route('blog.show', ['title' => $post->slug]) }}">
                 <div class="blog-post">
                     <img src="data:image/jpeg;base64,{{ base64_encode($post->image) }}" alt="Image" id="image"> <br>
                         {{ $post->title }}
