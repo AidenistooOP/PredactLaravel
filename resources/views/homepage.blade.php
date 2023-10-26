@@ -152,7 +152,6 @@
               <h4>Lees over</h4>
               <ul>
                 <li><a href="blogs/minecraft">Minecraft plug-ins</a></li>
-                <li><a href="blogs/office365">Support bij Office 365</a></li>
                 <li><a href="blogs/cryptoblockchain">Cryptocurrency en blockchain</a></li>
                 <li><a href="blogs/backups">Back-up maken</a></li>
               </ul>
