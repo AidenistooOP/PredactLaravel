@@ -84,14 +84,36 @@ class BlogController extends Controller
      */
     public function edit($id)
     {
-        // Implement this method to show a form for editing an existing blog post
+        $blogPost = BlogPost::find($id);
+    
+        if (!$blogPost) {
+            abort(404);
+        }
+    
+        return view('blog.edit', compact('blogPost'));
     }
+    
 
     /**
      * Update the specified resource in storage.
      */
     public function update(Request $request, $id)
     {
-        // Implement this method to update an existing blog post in the 'blog_posts' table
+        $blogPost = BlogPost::find($id);
+    
+        if (!$blogPost) {
+            abort(404);
+        }
+    
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+        ]);
+    
+        $blogPost->update($request->all());
+    
+        return redirect()->route('blog.show', $blogPost->slug)
+            ->with('success', 'Blog post updated successfully');
     }
+    
 }
