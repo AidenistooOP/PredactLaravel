@@ -37,6 +37,7 @@ Route::get('/offerte', function () {
 
 Route::get('/blogs', 'App\Http\Controllers\BlogController@index')->name('blog.index');
 Route::get('/blogs/{title}', 'App\Http\Controllers\BlogController@show')->name('blog.show');
-Route::get('/blogs/{title}', 'App\Http\Controllers\BlogController@destroy')->name('blog.destroy');
+Route::delete('/blogs/{id}', 'App\Http\Controllers\BlogController@destroy')->name('blog.destroy');
+
 
 
