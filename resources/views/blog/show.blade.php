@@ -35,6 +35,11 @@
             @method('DELETE')
             <button id="deleteBtn" type="submit"><i class="fa-solid fa-trash" style="font-size: 14px"></i> Delete</button>
         </form>
+        <br>
+        <a href="{{ route('blog.edit', $blogPost->id) }}">
+            <button id="editBtn"><i class="fa-solid fa-pen-to-square"></i> Edit</button>
+        </a>
+
         
     </div>
 
