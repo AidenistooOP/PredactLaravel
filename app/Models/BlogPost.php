@@ -14,6 +14,6 @@ class BlogPost extends Model
 
     // Define the model attributes (fields)
     protected $fillable = [
-        'title', 'description', 'read_time', 'published', 'content', // Add other fields as needed
+        'title', 'description', 'read_time', 'published', 'content', 'slug', 
     ];
 }

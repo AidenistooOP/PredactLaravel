@@ -36,8 +36,14 @@ Route::get('/offerte', function () {
 });
 
 Route::get('/blogs', 'App\Http\Controllers\BlogController@index')->name('blog.index');
-Route::get('/blogs/{title}', 'App\Http\Controllers\BlogController@show')->name('blog.show');
+Route::get('blogs/{slug}', 'App\Http\Controllers\BlogController@show')->name('blog.show');
 Route::delete('/blogs/{id}', 'App\Http\Controllers\BlogController@destroy')->name('blog.destroy');
+Route::get('/blogs/{id}/edit', 'App\Http\Controllers\BlogController@edit')->name('blog.edit');
+Route::put('/blogs/{id}', 'App\Http\Controllers\BlogController@update')->name('blog.update');
+Route::post('/blogs', 'App\Http\Controllers\BlogController@store')->name('blog.store');
+Route::get('/blog/create', 'App\Http\Controllers\BlogController@create')->name('blog.create');
+
+
 
 
 

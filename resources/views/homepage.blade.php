@@ -80,7 +80,7 @@
                 src="https://www.microsoft.com/nl-nl/microsoft-365/blog/wp-content/uploads/sites/49/2022/06/cropped-microsoft_logo_element.png"
                 alt="javascript">
             </div>
-            <div class="title">Microsoft</div>
+            <div class="title">Microsoft 365</div>
           </div>
           <div class="box">
             <div class="image">
@@ -99,10 +99,10 @@
 
           <div class="box">
             <div class="image">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/2560px-Amazon_Web_Services_Logo.svg.png"
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/1200px-Laravel.svg.png"
                 alt="Amazon Web Service">
             </div>
-            <div class="title">Amazon Web Service</div>
+            <div class="title">Laravel</div>
           </div>
         </div>
       </div>
@@ -152,7 +152,6 @@
               <h4>Lees over</h4>
               <ul>
                 <li><a href="blogs/minecraft">Minecraft plug-ins</a></li>
-                <li><a href="blogs/office365">Support bij Office 365</a></li>
                 <li><a href="blogs/cryptoblockchain">Cryptocurrency en blockchain</a></li>
                 <li><a href="blogs/backups">Back-up maken</a></li>
               </ul>
