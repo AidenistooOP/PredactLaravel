@@ -18,16 +18,16 @@
         @method('PUT')
 
         <div class="form-group">
-            <label for="title">Title:</label>
+            <label for="title">Titel:</label>
             <input type="text" name="title" id="title" class="form-control" value="{{ old('title', $blogPost->title) }}">
         </div>
 <br>
         <div class="form-group">
-            <label for="description">Description:</label>
+            <label for="description">Artikel:</label>
             <textarea name="description" id="description" class="form-control" rows="4">{{ old('description', $blogPost->description) }}</textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-floppy-disk"></i> Save</button>
     </form>
 </body>
 </html>

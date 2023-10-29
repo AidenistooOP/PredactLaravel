@@ -20,15 +20,17 @@
         <h1 style="color: white"># Blog Posts</h1>
         <div class="blog-grid">
             @foreach($blogPosts as $post)
-            <a href="{{ route('blog.show', ['title' => $post->slug]) }}">
+            <a href="{{ route('blog.show', ['slug' => $post->slug]) }}">
                 <div class="blog-post">
                     <img src="data:image/jpeg;base64,{{ base64_encode($post->image) }}" alt="Image" id="image"> <br>
                         {{ $post->title }}
                 </div>
               </a>
             @endforeach
-        </div> <br>  <p style="font-size: 18px">Fout gevonden in een van onze blog posts? <a href="mailto:bugs@predact.nl?subject=Fout gevonden in blog:" target="_top">Meld het hier!</a></p>
-          <br> <br><br><br><br><br><br>
+        </div> <br>  <p style="font-size: 18px"> <br>Fout gevonden in een van onze blog posts? <a href="mailto:bugs@predact.nl?subject=Fout gevonden in blog:" target="_top">Meld het hier!</a></p>
+          <br>
+          <a href="{{ route('blog.create') }}" class="btn btn-primary"><button><i class="fa-solid fa-plus"></i> Nieuwe blog post</button></a>
+          <br><br><br><br><br><br>
       </div>
       <div class="footerWrapper">
         <footer class="footer">

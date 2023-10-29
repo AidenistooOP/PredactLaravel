@@ -28,31 +28,43 @@ class BlogController extends Controller
      */
     public function create()
     {
-        // Implement this method to show a form for creating a new blog post
-    }
+        return view('blog.create');
+    }    
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
     {
-        // Implement this method to store a new blog post in the 'blog_posts' table
+        $request->validate([
+            'title' => 'required',
+            'description' => 'required',
+            'read-time' => 'required',
+            'image' => 'required',
+            'published' => 'required',
+            'slug' => 'required|unique:blog_posts,slug',
+        ]);
+        
+        // Generate a slug from the title
+        $slug = $request->input('slug');
+        
+        $blogPost = BlogPost::create(array_merge($request->all(), ['slug' => $slug]));
+        
+        return redirect()->route('blog.show', $blogPost->slug)
+            ->with('success', 'Blog post created successfully');
+        
     }
+    
 
     /**
      * Display the specified resource.
      */
-    public function show($title)
+    public function show($slug)
     {
-        $slug = Str::slug($title, '-');
-    
         $blogPost = BlogPost::where('slug', $slug)->first();
     
         if (!$blogPost) {
-            abort(404); 
-            header("HTTP/1.0 404 Not Found");
-    include("custom-404-page.html");
-    exit();
+            abort(404);
         }
     
         return view('blog.show', [
@@ -62,10 +74,11 @@ class BlogController extends Controller
             'description' => $blogPost->description,
             'blogPost' => $blogPost,
             'image' => $blogPost->image,
-            'slug' => $slug,
+            'slug' => $blogPost->slug,
         ]);
     }
-
+    
+    
     public function destroy($id)
     {
         $blogPost = BlogPost::find($id);
