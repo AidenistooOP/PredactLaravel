@@ -23,13 +23,13 @@
     <br>
     <div class="container">
       <div class="left-column">
-        <img src="https://predact-new-git.aidenonyenwenu.repl.co/images/undraw_pair_programming_re_or4x.svg" class="left-image">
+        <img src="https://assets.codepen.io/3364143/glass.png" class="left-image" height="400px">
       </div>
       <div class="column right-column">
         <h1 id="changingHead">Uw bedrijf online vindbaar maken!</h1>
         <p>Predact is sinds 2023 dé toonaangevende web ontwikkelingsservice van Nederland. Met onze expertise in het
-          bouwen van websites en kassapplicaties, leveren we hoogwaardige online oplossingen voor jouw bedrijf. Ons team
-          van professionals zorgt ervoor dat jouw websites en kassasystemen perfect aansluiten bij jouw behoeften en
+          bouwen van websites en one-pagers, leveren we hoogwaardige online oplossingen voor jouw bedrijf. Ons team
+          van professionals zorgt ervoor dat jouw websites perfect aansluiten bij jouw behoeften en
           wensen. Met onze geavanceerde technologie en legendarische support streven we ernaar om jou de ultieme online
           ervaring te bieden. Vertrouw je online projecten toe aan Predact en laat ons jouw digitale aanwezigheid naar
           nieuwe hoogten tillen.</p>
@@ -43,6 +43,8 @@
         en innovatieve oplossingen hebben gecreëerd voor onze tevreden klanten.</p>
       <a href="/projecten"><button>Openen</button></a>
     </section>
+    
+    
     <br> <br> <br>
     <br>
 
@@ -124,15 +126,28 @@
 
       <br>
       <div class="loginCard">
-        <h1>Login om uw project te beheren!</h1>
-        <p>Maak een account aan om vragen te stellen via ons Ticket Systeem. Ook kunt u eventuele betalingen uitvoeren
-          d.m.v. de betaalmethodes IDeal en PayPal. </p>
-        <a href="/login" class="sign-up-btn"><i class="fa-solid fa-arrow-right-to-bracket" style="color: #ffffff;"></i> Inloggen!</a>
+        <h1>Afspraak maken voor een kennismaking!</h1>
+        <p>Vul het formulier in, zodat wij met u in contact kunnen komen over uw aankomende project.</p>
+        <a class="sign-up-btn" data-cal-link="aidenonyenwenu123/meet-with-me"><i class="fa-solid fa-calendar-days"></i> Plannen</a>
       </div>
 
       <br>
 
     </div>
+
+        <!-- Cal element-click embed code begins -->
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", {origin:"https://cal.com"});
+
+  
+  // Important: Please add following attributes to the element you want to open Cal on click
+  // `data-cal-link="aidenonyenwenu123/meet-with-me"`
+  // `data-cal-config='{"layout":"month_view"}'`
+  
+  Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  </script>
+  <!-- Cal element-click embed code ends -->
 
     <div class="footerWrapper">
       <footer class="footer">
@@ -143,7 +158,6 @@
               <ul>
                 <li><a href="#">Home</a></li>
                 <li><a href="/login">Login</a></li>
-                <li><a href="/offerte">Offerte</a></li>
                 <li><a href="/projecten">Projecten</a></li>
                 <li><a href="#">Privacy Policy</a></li>
               </ul>
