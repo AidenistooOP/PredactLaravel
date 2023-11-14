@@ -35,11 +35,12 @@
     </div>
     <div class="grid-item">
       <h2>Restaurant De Pink</h2> <a href="https://restaurant-nieuw.aidenonyenwenu.repl.co/"><button><i class="fa-solid fa-paperclip"></i> Open website</button></a> <a href="https://github.com/AidenistooOP/RestaurantWebsite"><button><i class="fa-brands fa-github"></i> Github pagina bezoeken</button></a> <br> <br>
+      
       <iframe src="https://restaurant-nieuw.aidenonyenwenu.repl.co/" frameborder="0" width="100%"
         height="600"></iframe>
     </div>
     <div class="grid-item">
-      <h2>Forza Horizon Toernooi</h2><a href="https://test-forza.aidenonyenwenu.repl.co"><button><i class="fa-solid fa-paperclip"></i> Open website</button></a> <br> <br>
+      <h2>Forza Horizon Toernooi</h2><button disabled><i class="fa-solid fa-circle-xmark"></i> Website offline</button> <br> <br>
       <iframe src="https://test-forza.aidenonyenwenu.repl.co" frameborder="0" width="100%" height="600"></iframe>
     </div>
   </div>
@@ -47,11 +48,24 @@
   <br> <br>
 
   <div class="loginCard">
-    <h1>Login om uw project te beheren!</h1>
-    <p>Maak een account aan om vragen te stellen via ons Ticket Systeem. Ook kunt u eventuele betalingen uitvoeren
-      d.m.v. de betaalmethodes IDeal en PayPal. </p>
-    <a href="/login" class="sign-up-btn"> <i class="fa-solid fa-arrow-right-to-bracket" style="color: #ffffff;"></i> Inloggen!</a>
+    <h1>Afspraak maken voor een kennismaking!</h1>
+    <p>Vul het formulier in, zodat wij met u in contact kunnen komen over uw aankomende project.</p>
+    <a class="sign-up-btn" data-cal-link="aidenonyenwenu123/meet-with-me"><i class="fa-solid fa-calendar-days"></i> Plannen</a>
   </div>
+
+   <!-- Cal element-click embed code begins -->
+<script type="text/javascript">
+  (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; typeof namespace === "string" ? (cal.ns[namespace] = api) && p(api, ar) : p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", {origin:"https://cal.com"});
+
+  
+  // Important: Please add following attributes to the element you want to open Cal on click
+  // `data-cal-link="aidenonyenwenu123/meet-with-me"`
+  // `data-cal-config='{"layout":"month_view"}'`
+  
+  Cal("ui", {"styles":{"branding":{"brandColor":"#000000"}},"hideEventTypeDetails":false,"layout":"month_view"});
+  </script>
+  <!-- Cal element-click embed code ends -->
 
 
   <br> <br> <br> <br>
@@ -65,7 +79,6 @@
             <ul>
               <li><a href="/home">Home</a></li>
               <li><a href="/login">Login</a></li>
-              <li><a href="/offerte">Offerte</a></li>
               <li><a href="/projecten">Projecten</a></li>
               <li><a href="#">Privacy Policy</a></li>
             </ul>
