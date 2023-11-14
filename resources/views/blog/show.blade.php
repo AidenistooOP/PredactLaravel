@@ -10,8 +10,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/80bfb3b6e2.js" crossorigin="anonymous"></script>
 </head>
-<body>
-     <!-- Specifiek 1 blog hier uit de database gehaald --> 
+<body> 
      <div class="container">
         <a href="{{ url('/blogs') }}" class="btn btn-light"><i class="fas fa-arrow-left"></i> Naar alle posts</a>
         <h1 class="mt-4"># {{ $title }}</h1>

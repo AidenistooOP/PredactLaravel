@@ -6,13 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class BlogPost extends Model
 {
-    protected $table = 'blog_posts'; // Specify the name of the database table
+    protected $table = 'blog_posts';
 
-    protected $primaryKey = 'id'; // Specify the primary key field (usually 'id')
+    protected $primaryKey = 'id';
 
-    public $timestamps = true; // Indicates whether the model should manage the 'created_at' and 'updated_at' columns
+    public $timestamps = true; //  Wordt inprincipe ingevuld bij de create pagina
 
-    // Define the model attributes (fields)
     protected $fillable = [
         'title', 'description', 'read_time', 'published', 'content', 'slug', 
     ];
