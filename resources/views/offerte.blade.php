@@ -61,7 +61,6 @@
                         <ul>
                             <li><a href="/home">Home</a></li>
                             <li><a href="/login">Login</a></li>
-                            <li><a href="/offerte">Offerte</a></li>
                             <li><a href="/projecten">Projecten</a></li>
                             <li><a href="#">Privacy Policy</a></li>
                         </ul>
