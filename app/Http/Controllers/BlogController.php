@@ -14,7 +14,6 @@ class BlogController extends Controller
      */
     public function index()
     {
-        // Retrieve all blog posts from the 'blog_posts' table
         $blogPosts = BlogPost::all();
 
         return view('blog.index', compact('blogPosts'));
@@ -45,13 +44,13 @@ class BlogController extends Controller
             'slug' => 'required|unique:blog_posts,slug',
         ]);
         
-        // Generate a slug from the title
         $slug = $request->input('slug');
         
         $blogPost = BlogPost::create(array_merge($request->all(), ['slug' => $slug]));
+        // Met behulp van bron: https://laracasts.com/discuss/channels/laravel/how-to-create-url-slugs-in-laravel
         
         return redirect()->route('blog.show', $blogPost->slug)
-            ->with('success', 'Blog post created successfully');
+            ->with('success', 'Blog aangemaakt test');
         
     }
     
@@ -64,7 +63,7 @@ class BlogController extends Controller
         $blogPost = BlogPost::where('slug', $slug)->first();
     
         if (!$blogPost) {
-            abort(404);
+            return response()->view('errors.custom404', [], 404);
         }
     
         return view('blog.show', [
@@ -79,15 +78,16 @@ class BlogController extends Controller
     }
     
     
+    
     public function destroy($id)
     {
         $blogPost = BlogPost::find($id);
     
         if (!$blogPost) {
-            abort(404);
+            return response()->view('errors.custom404', [], 404);
         }
         $blogPost->delete();
-        return redirect('/blogs')->with('success', 'Blog post deleted successfully');
+        return redirect('/blogs')->with('success', 'test Blog verwijderd');
     }
     
     
@@ -100,7 +100,7 @@ class BlogController extends Controller
         $blogPost = BlogPost::find($id);
     
         if (!$blogPost) {
-            abort(404);
+            return response()->view('errors.custom404', [], 404);
         }
     
         return view('blog.edit', compact('blogPost'));
@@ -115,7 +115,7 @@ class BlogController extends Controller
         $blogPost = BlogPost::find($id);
     
         if (!$blogPost) {
-            abort(404);
+            return response()->view('errors.custom404', [], 404);
         }
     
         $request->validate([
@@ -126,7 +126,7 @@ class BlogController extends Controller
         $blogPost->update($request->all());
     
         return redirect()->route('blog.show', $blogPost->slug)
-            ->with('success', 'Blog post updated successfully');
+            ->with('success', 'Blog geupdate!');
     }
     
 }
